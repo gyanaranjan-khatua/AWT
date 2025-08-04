@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/jetsetgologo.jpeg"; // Replace with your logo
+import logo from "../assets/awt.png"; // Replace with your logo
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
