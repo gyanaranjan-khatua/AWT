@@ -7,14 +7,12 @@ import {
 } from "react-icons/fa"
 import { Luggage, PlaneTakeoff, MapPin, Compass } from "lucide-react"
 import { Star, Phone, ChevronLeft, ChevronRight, Calendar } from "lucide-react"
-import DisneyLandParis from "./../assets/heroimg/DisneyLandParis.jpeg"
-import MountTitlis from "./../assets/heroimg/MountTitlis.jpeg"
-import SwarovskiCrystalMuseum from "./../assets/heroimg/SwarovskiCrystalMuseum.jpeg"
-import Interlaken from "./../assets/heroimg/Interlaken.jpeg"
-import Grindewald from "./../assets/heroimg/Grindewald.jpeg"
-import Amsterdam from "./../assets/heroimg/Amsterdam.jpeg"
-import Vietnam from "./../assets/heroimg/Vietnam.jpeg"
-
+import awt1 from "./../assets/awt1.jpeg"
+import awt2 from "./../assets/awt2.jpeg"
+import awt3 from "./../assets/awt3.jpeg"
+import awt4 from "./../assets/awt4.jpeg"
+import awt5 from "./../assets/awt5.jpeg"
+import { Link } from "react-router-dom"
 // Floating travel icons
 const floatingIcons = [
   { icon: FaPlane, delay: 0 },
@@ -37,55 +35,42 @@ const floatingIcons = [
 // Slides data
 const slides = [
   {
-    image: DisneyLandParis,
-    title: "Disney Land Paris",
-    description: "Feel the beauty of untouched wilderness and discover hidden gems",
-    location: "Swiss Alps",
+    image: awt1,
+    title: "Crafting Journeys, Creating Memories.",
+    description: "We don’t just book trips — we design experiences that leave lasting impressions.",
+    location: "Disneyland Paris • Best for Family Tours",
     rating: 4.9,
   },
   {
-    image: MountTitlis,
-    title: "Mount Titlis",
-    description: "Discover vibrant cityscapes and urban adventures",
-    location: "Kerala, India",
+    image: awt2,
+    title: "Where Every Trip Begins with Trust",
+    description: "At Aquilo World Tour LLP, your comfort, safety, and satisfaction are our top priorities.",
+    location: "Switzerland • Premium Holiday Package",
     rating: 4.8,
   },
   {
-    image: SwarovskiCrystalMuseum,
-    title: "Swarovski Crystal museum",
-    description: "Experience the golden sands and mystical desert landscapes",
-    location: "Sahara Desert",
+    image: awt3,
+    title: "Escape the Ordinary, Explore the Extraordinary.",
+    description: "Personalized itineraries, seamless coordination, and complete flexibility",
+    location: "Austria • Art & Culture Tour",
     rating: 4.7,
   },
   {
-    image: Interlaken,
-    title: "Interlaken",
-    description: "Reach new heights with breathtaking mountain adventures",
-    location: "Himalayas",
+    image: awt4,
+    title: "Your World, Your Way — Travel Made Simple",
+    description: "Thrill-seekers' paradise – skydiving, trekking, and peace in the peaks.",
+    location: "Interlaken • Adventure & Nature Tour",
     rating: 4.9,
   },
   {
-    image: Grindewald,
-    title: "Grindelwald",
-    description: "Reach new heights with breathtaking mountain adventures",
-    location: "Himalayas",
+    image: awt5,
+    title: "Turning Travel Dreams Into Reality,",
+    description: "No dream is too big or destination too far. From bucket-list adventures to spontaneous getaways.",
+    location: "Interlaken • Adventure & Nature Tour",
     rating: 4.9,
   },
-  {
-    image: Amsterdam,
-    title: "Amsterdam",
-    description: "Reach new heights with breathtaking mountain adventures",
-    location: "Himalayas",
-    rating: 4.9,
-  },
-  {
-    image: Vietnam,
-    title: "Vietnam",
-    description: "Reach new heights with breathtaking mountain adventures",
-    location: "Himalayas",
-    rating: 4.9,
-  },
-]
+];
+
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -98,13 +83,7 @@ export default function Hero() {
     return () => clearInterval(timer)
   }, [])
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }
+ 
 
   const currentData = slides[currentSlide]
 
@@ -195,16 +174,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             {/* Location Badge */}
-            <motion.div
-              className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-md rounded-full px-4 py-2 text-sm font-medium text-indigo-900 shadow-xl border border-white/20"
-              key={`location-${currentSlide}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <MapPin size={16} className="text-sky-700" />
-              {currentData.location}
-            </motion.div>
+          
 
             {/* Title */}
             <AnimatePresence mode="wait">
@@ -265,10 +235,13 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
+              <Link to="/book">
               <button className="bg-gradient-to-r from-indigo-700 to-fuchsia-600 hover:from-indigo-900 hover:to-fuchsia-800 text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 font-semibold text-base sm:text-lg">
                 <Calendar size={20} />
                 Book Now
               </button>
+              </Link>
+              <a href="tel:+919668504726"></a>
               <button className="border-2 border-white text-white hover:bg-white hover:text-fuchsia-800 px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-transparent flex items-center justify-center gap-2 font-semibold text-base sm:text-lg backdrop-blur-sm">
                 <Phone size={20} />
                 Call Now
@@ -294,13 +267,13 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
           >
-            <div className="relative inline-block overflow-hidden rounded-3xl shadow-2xl bg-white/95 p-2 md:p-4">
+            <div className="relative inline-block overflow-hidden  shadow-2xl ">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={currentSlide}
                   src={currentData.image}
                   alt={currentData.title}
-                  className="w-[88vw] max-w-xs md:max-w-md lg:max-w-lg h-auto object-contain rounded-2xl aspect-video"
+                  className=" rounded-2xl aspect-video"
                   initial={{ opacity: 0, scale: 1.08 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.92 }}
@@ -309,22 +282,7 @@ export default function Hero() {
               </AnimatePresence>
 
               {/* Navigation Arrows */}
-              <button
-                onClick={prevSlide}
-                className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow-lg hover:bg-fuchsia-100 transition-all duration-300 hover:scale-110 focus:outline-none"
-                aria-label="Previous Slide"
-                tabIndex={0}
-              >
-                <ChevronLeft size={26} className="text-indigo-700" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 backdrop-blur-sm rounded-full p-2 shadow-lg hover:bg-fuchsia-100 transition-all duration-300 hover:scale-110 focus:outline-none"
-                aria-label="Next Slide"
-                tabIndex={0}
-              >
-                <ChevronRight size={26} className="text-indigo-700" />
-              </button>
+              
             </div>
 
             {/* Decorative Elements */}

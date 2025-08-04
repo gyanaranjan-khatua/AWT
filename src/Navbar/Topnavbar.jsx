@@ -24,7 +24,7 @@ function Topnavbar() {
             className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-orange-600 to-yellow-500 rounded-full text-white text-xs sm:text-sm font-semibold 
                        hover:from-green-500 hover:to-teal-600 transition-all duration-300 shadow-md group animate-pop-in"
           >
-            <span>✨ From Dream to Destination — JetSetGo!</span>
+            <span>✨ Where Every Journey Begins — Aquilo World Tour LLP!</span>
             <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
           </a>
         </div>
@@ -33,20 +33,20 @@ function Topnavbar() {
         <div className="flex flex-wrap items-center justify-center lg:justify-end gap-x-6 gap-y-2 text-xs sm:text-sm">
           {/* Phone */}
           <a 
-            href="tel:+919114000260" 
+            href="tel:+919668504726" 
             className="flex items-center space-x-2 text-white hover:text-blue-200 transition-colors duration-200"
           >
             <Phone size={16} className="text-blue-300" /> 
-            <span>+91 9556677620</span>
+            <span>+91 9668504726</span>
           </a>
           
           {/* Email */}
           <a 
-            href="mailto:info@bhadraneeseva.com" 
+            href="mailto:aqualoworldtour@gmail.com" 
             className="flex items-center space-x-2 text-white hover:text-blue-200 transition-colors duration-200"
           >
             <Mail size={16} className="text-blue-300" />
-            <span>jetsetgoholidays.bbi@gmail.com</span>
+            <span>aqualoworldtour@gmail.com</span>
           </a>
 
           {/* Social Icons (hidden on small screens, appear on larger) */}
