@@ -4,10 +4,9 @@ import PassportAssistance from "./../assets/PassportAssistance.jpg"
 import visa from "./../assets/visa.jpg"
 import HotelBooking from "./../assets/HotelBooking.jpg"
 import ForexAssistance from "./../assets/ForexAssistance.jpg"
-import TravelInsurance from "./../assets/TravelInsurance.jpg"
-import CarRental from "./../assets/CarRental.jpg"
-import wedding from "./../assets/wedding.jpg"
-import event from "./../assets/event.jpg"
+import cruise from "./../assets/cruise.jpg"
+
+
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import {
@@ -47,81 +46,57 @@ const CardContent = ({ children, className = "", ...props }) => (
     {children}
   </div>
 )
-
 const services = [
   {
     id: 1,
-    title: "Air Ticket",
-    description: "Book domestic and international flights at competitive prices with 24/7 support.",
-    icon: Plane,
+    title: "Holiday & Tour Packages",
+    description: "Explore curated domestic and international holiday packages tailored to your needs.",
+    icon: Palmtree,
     image: airticket,
     gradient: "from-blue-500 to-cyan-500",
   },
   {
     id: 2,
-    title: "Passport Assistance",
-    description: "Complete guidance for passport applications, renewals, and documentation.",
-    icon: FileText,
-    image:PassportAssistance,
+    title: "Hotel Preservation",
+    description: "Reserve top-rated hotels and accommodations with ease and exclusive deals.",
+    icon: Building,
+    image: HotelBooking,
     gradient: "from-orange-500 to-red-500",
   },
   {
     id: 3,
-    title: "Visa Assistance",
-    description: "Expert visa consultation and application support for all destinations worldwide.",
+    title: "Passport & VISA",
+    description: "Get complete assistance for passport and visa processing for all countries.",
     icon: Globe,
     image: visa,
     gradient: "from-blue-500 to-cyan-500",
   },
   {
     id: 4,
-    title: "Hotel Booking",
-    description: "Luxury accommodations and budget-friendly stays with exclusive deals and offers.",
-    icon: Building,
-    image: HotelBooking,
+    title: "Cruise Booking",
+    description: "Book luxurious cruises across oceans and rivers with unforgettable experiences.",
+    icon: Compass,
+    image: cruise,
     gradient: "from-orange-500 to-red-500",
   },
   {
     id: 5,
-    title: "Forex Assistance",
-    description: "Currency exchange services with competitive rates and secure transactions.",
-    icon: DollarSign,
-    image:ForexAssistance,
+    title: "Air Ticketing",
+    description: "Book domestic and international flight tickets at the best available prices.",
+    icon: Plane,
+    image: airticket,
     gradient: "from-blue-500 to-cyan-500",
   },
   {
     id: 6,
-    title: "Travel Insurance",
-    description: "Comprehensive travel protection covering medical emergencies and trip cancellations.",
-    icon: Shield,
-    image: TravelInsurance,
+    title: "Forex",
+    description: "Secure and fast foreign exchange services for all your international travels.",
+    icon: DollarSign,
+    image: ForexAssistance,
     gradient: "from-orange-500 to-red-500",
-  },
-  {
-    id: 7,
-    title: "Car Rental",
-    description: "Wide selection of vehicles from economy to luxury cars for your travel needs.",
-    icon: Car,
-    image: CarRental,
-    gradient: "from-blue-500 to-cyan-500",
-  },
-  {
-    id: 8,
-    title: "Destination Wedding",
-    description: "Plan your dream wedding in exotic locations with our complete event management.",
-    icon: Heart,
-    image: wedding,
-    gradient: "from-orange-500 to-red-500",
-  },
-  {
-    id: 9,
-    title: "MICE",
-    description: "Corporate events, conferences, and incentive travel programs tailored to your needs.",
-    icon: Users,
-    image: event,
-    gradient: "from-blue-500 to-cyan-500",
   },
 ]
+
 
 const floatingIcons = [
   { icon: MapPin, delay: 0, duration: 6 },
@@ -213,7 +188,7 @@ export default function TravelServices() {
 
   const handleWhatsAppSubmit = (e) => {
     e.preventDefault()
-    const phoneNumber = "+919556677620" // Replace with your WhatsApp number
+    const phoneNumber = "+919668504726" // Replace with your WhatsApp number
     const message = encodeURIComponent(
       `🌍 Service Inquiry: ${selectedServiceTitle}\n👤 Name: ${formData.name}\n📞 Phone: ${formData.phone}\n📧 Email: ${formData.email}`
     )
@@ -361,7 +336,7 @@ export default function TravelServices() {
               Contact our travel experts today and let us create an unforgettable experience tailored just for you.
             </p>
             <Link to="/book"  >
-            <Button className="bg-gradient-to-r from-blue-600 to-sky-500 hover:from-red-500 hover:to-purple-700 text-white px-8 py-3 rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300">
+            <Button className="bg-gradient-to-r from-orange-600 to-red-500 hover:from-red-500 hover:to-purple-700 text-white px-8 py-3 rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300">
               Get Started Today
             </Button>
             </Link>

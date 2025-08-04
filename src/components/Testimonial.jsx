@@ -96,7 +96,7 @@ const itemVariants = {
 }
 
 const Testimonial = () => (
-  <section className=" relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 py-5 px-4 sm:px-6 lg:px-8 overflow-hidden">
+  <section className=" relative min-h-screen bg-gradient-to-br from-cyan-700 via-blue-900 to-cyan-900 py-5 px-4 sm:px-6 lg:px-8 overflow-hidden">
     {/* Animated Background Elements */}
     <div className="absolute inset-0 overflow-hidden">
       <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -139,7 +139,7 @@ const Testimonial = () => (
 
         <motion.p variants={itemVariants} className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
           Don't just take our word for it. Here's what our clients have to say about their
-          <span className="text-blue-300 font-semibold"> amazing travel experiences</span> with JetSetGO.
+          <span className="text-blue-300 font-semibold"> amazing travel experiences</span> with World Tour LLP.
         </motion.p>
       </motion.div>
 

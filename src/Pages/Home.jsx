@@ -4,10 +4,12 @@ import TravelServices from '../Sections/TravelServices'
 import ContactSection from '../components/ContactSec'
 import AboutContent from '../Sections/AboutContent'
 import DestinationShowcase from '../components/Tours'
-import Testimonials from '../components/Testimonial'
-import Slider from '../Sections/Slider'
+// import Testimonials from '../components/Testimonial'
+// import Slider from '../Sections/Slider'
 import FaqSection from '../Sections//FaqSection'
 import Testimonial from '../components/Testimonial'
+import Map from '../Sections/Map'
+// import Footer from '../Footer/Footer'
 function Home() {
   return (
     <>
@@ -15,10 +17,12 @@ function Home() {
        <TravelServices/>
         <DestinationShowcase/>
      <AboutContent />
-     <Slider/>
+     {/* <Slider/> */}
     <Testimonial/>
     <FaqSection/>
     <ContactSection />
+    <Map/>
+
     </>
   )
 }

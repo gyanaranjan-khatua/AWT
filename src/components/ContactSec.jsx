@@ -20,7 +20,7 @@ const ContactSection = () => {
 
   const handleWhatsAppClick = (e) => {
     e.preventDefault()
-    const phoneNumber = "919556677620"
+    const phoneNumber = "919668504726"
     const message = encodeURIComponent(
       `🌍 *Travel Trip Booking*\n\n👤 Name: ${formData.name}\n📞 Phone: ${formData.email}\n💬 Message: ${formData.message}`
     )
@@ -47,7 +47,7 @@ const ContactSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-white sm:text-5xl">Let's Connect</h2>
-          <div className="mt-4 h-1 w-20 bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 mx-auto rounded-full" />
+          <div className="mt-4 h-1 w-20 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 mx-auto rounded-full" />
           <p className="mt-6 text-lg text-gray-300 max-w-3xl mx-auto">
             Have a project in mind? Want to collaborate? Send me a message!
           </p>
@@ -61,7 +61,7 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-l-4 border-purple-500"
+            className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-l-4 border-cyan-500"
           >
             <h3 className="text-2xl font-semibold text-white mb-6">Send a Message</h3>
             <form onSubmit={handleWhatsAppClick} className="space-y-6">
@@ -116,7 +116,7 @@ const ContactSection = () => {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 text-white font-medium rounded-lg hover:shadow-lg transition-all"
+                className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 text-white font-medium rounded-lg hover:shadow-lg transition-all"
               >
                 <FiSend className="text-lg" />
                 Send Message
@@ -144,48 +144,54 @@ const ContactSection = () => {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-l-4 border-purple-500">
+            <div className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-l-4 border-cyan-500">
               <h3 className="text-2xl font-semibold text-white mb-6">Contact Info</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-gray-700 rounded-full text-purple-400">
+                  <div className="p-3 bg-gray-700 rounded-full text-blue-400">
                     <FiMail className="text-xl" />
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-200">Email</h4>
                     <a
-                      href="mailto:contact@example.com"
+                      href="mailto:aqualoworldtour@gmail.com"
                       className="text-gray-300 hover:text-purple-400 transition-colors"
                     >
-                      jetsetgoholidays.bbi@gmail.com
+                      aqualoworldtour@gmail.com
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-gray-700 rounded-full text-purple-400">
+                  <div className="p-3 bg-gray-700 rounded-full text-blue-400">
                     <FiPhone className="text-xl" />
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-200">Phone</h4>
-                    <a href="tel:+1234567890" className="text-gray-300 hover:text-purple-400 transition-colors">
-                      +9195566 77620
+                    <a href="tel: +919668504726" className="text-gray-300 hover:text-purple-400 transition-colors">
+                      +919668504726
+                    </a>
+                    <br />
+                     <a href="tel:+917008632718" className="text-gray-300 hover:text-purple-400 transition-colors">
+                      +917008632718
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-gray-700 rounded-full text-purple-400">
+                  <div className="p-3 bg-gray-700 rounded-full text-blue-400">
                     <FiMapPin className="text-xl" />
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-200">Location</h4>
-                    <p className="text-gray-300">Plot No.1, Udyan Marg, Forest Park, Bhubaneswar, Odisha 751009</p>
+                    <p className="text-gray-300">Plot No-Scr 25, Back Side of Boyonika Bhawan,Unit-III </p>
+                    <br />
+                    <p className="text-gray-300">Kharvel Nagar Bhubaneswar, Odisha 751001</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-l-4 border-purple-500">
+            <div className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-l-4 border-cyan-500">
               <h3 className="text-xl font-semibold text-white mb-4">Follow Me</h3>
               <div className="flex gap-4">
                 {[{ icon: <FiTwitter />, url: "#" }, { icon: <FiLinkedin />, url: "#" }, { icon: <FiGithub />, url: "#" }].map((social, index) => (

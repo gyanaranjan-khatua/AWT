@@ -1,8 +1,8 @@
 "use client"
 import { motion } from "framer-motion"
 import { Shield, Award, Clock, Users, ChevronRight, Sparkles, Target, Heart, Zap } from "lucide-react"
-import aboutimg from '../assets/gallery/pic3.jpeg'
-import bgcar from '../assets/gallery/about5.jpeg'
+import aboutimg from '../assets/airticket.jpg'
+import bgcar from '../assets/cruise.jpg'
 import { Link } from 'react-router-dom'
 const AboutContent = () => {
   // Animation variants
@@ -78,7 +78,7 @@ const AboutContent = () => {
 
   return (
     <>
-      <div className=" min-h-screen overflow-hidden bg-gray-950 text-gray-100"> {/* Dark background added here */}
+      <div className=" min-h-screen overflow-hidden bg-white text-gray-900"> {/* Dark background added here */}
         {/* Hero Section */}
         <section className="relative px-6 lg:px-8 py-5">
           <div className="max-w-7xl mx-auto relative">
@@ -91,45 +91,41 @@ const AboutContent = () => {
               {/* Text Section */}
               <motion.div className="md:w-1/2 mb-12 md:mb-0" variants={itemVariants}>
                 <motion.div
-                  className="inline-flex items-center gap-2 shadow-lg backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-gray-200 bg-white/10 mb-6" /* Adjusted for dark theme */
+                  className="inline-flex items-center gap-2 shadow-lg backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-white bg-orange-400 mb-6" /* Adjusted for dark theme */
                   variants={scaleVariants}
                 >
                   <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
                   Our Story
                 </motion.div>
 
-                <motion.h1
-                  className="text-4xl md:text-4xl text-white roboto lg:text-5xl font-extrabold mb-6 leading-tight" /* Adjusted for dark theme */
-                  variants={itemVariants}
-                >
-                  About{" "}
-                  <span className="text-red-500">
-                    JetSet<span className="text-red-500">GO</span>
-                  </span>
-                </motion.h1>
+          <motion.h1
+  className="text-4xl md:text-4xl text-gray-900 roboto lg:text-5xl font-extrabold mb-6 leading-tight"
+  variants={itemVariants}
+>
+  About{" "}
+  <span className="text-red-500">
+    Aquilo <span className="text-red-500">World Tour LLP</span>
+  </span>
+</motion.h1>
 
-                <motion.p className="text-gray-300 text-lg md:text-xl mb-3 leading-relaxed" variants={itemVariants}> {/* Adjusted for dark theme */}
-                 JET SET GO HOLIDAYS | Passionate Holiday Planners & Travel Experts
-                </motion.p>
+<motion.p className="text-gray-900 text-lg md:text-xl mb-3 leading-relaxed" variants={itemVariants}>
+  Aquilo World Tour LLP | Your Trusted Travel Partner for Seamless Global Journeys
+</motion.p>
 
-                <motion.p className="text-gray-200 font-medium text-lg md:text-xl mb-3 leading-relaxed" variants={itemVariants}> {/* Adjusted for dark theme */}
-                 At Jet Set Go Holidays, we're driven by a passion for crafting unforgettable travel experiences. Our expert team provides personalized holiday planning, seamless booking, and exceptional travel services. From romantic getaways to thrilling adventures, we tailor-make journeys that exceed expectations.
-                </motion.p>
 
-                 <motion.p className="text-gray-300 text-lg md:text-xl mb-3 leading-relaxed" variants={itemVariants}> {/* Adjusted for dark theme */}
-                With years of industry expertise and a deep understanding of global destinations, we offer:
 
-- Customized itineraries
-- Exclusive deals and packages
-- 24/7 travel support
+<motion.p className="text-gray-900 text-lg md:text-xl mb-3 leading-relaxed" variants={itemVariants}>
+  With extensive experience in the travel industry and a dedicated team, we offer a wide range of services:
+  <br /><br />
+  - Customized Holiday & Tour Packages<br />
+  - Hotel Reservation Services Worldwide<br />
+  - Passport & Visa Assistance<br />
+  - Air Ticket Booking (Domestic & International)<br />
+  - Foreign Exchange & Travel Insurance
+</motion.p>
 
-Trust us to plan your dream vacation! Let us handle the details, so you can focus on making memories.
-                </motion.p>
-                 <motion.p className="text-gray-200 font-medium text-lg md:text-xl mb-8 leading-relaxed" variants={itemVariants}> {/* Adjusted for dark theme */}
-                
-#JetSetGoHolidays #TravelExperts #HolidayPlanners #DreamVacation #TravelWithUs"
 
-                </motion.p>
+
 
 
                 <motion.div variants={itemVariants}>
@@ -261,7 +257,7 @@ Trust us to plan your dream vacation! Let us handle the details, so you can focu
                 return (
                   <motion.div
                     key={index}
-                    className="bg-gray-800/70 shadow-lg backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:bg-gray-700 hover:border-blue-500 transition-all duration-300" /* Darker card, subtle border, and hover */
+                    className="bg-gray-900/70 shadow-lg backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:bg-gray-700 hover:border-blue-500 transition-all duration-300" /* Darker card, subtle border, and hover */
                     variants={fadeInUpVariants}
                     whileHover={{ y: -5 }}
                   >
@@ -284,7 +280,7 @@ Trust us to plan your dream vacation! Let us handle the details, so you can focu
         <section className="py-16 px-6 lg:px-8 bg-gradient-to-br from-gray-900 to-black"> {/* Darker gradient for CTA section */}
           <div className="max-w-5xl mx-auto">
             <motion.div
-              className="bg-gray-800 rounded-3xl shadow-xl overflow-hidden" /* Darker card background */
+              className="bg-white rounded-3xl shadow-xl overflow-hidden" /* Darker card background */
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -292,10 +288,10 @@ Trust us to plan your dream vacation! Let us handle the details, so you can focu
             >
               <div className="flex flex-col md:flex-row">
                 {/* Left Section */}
-                <div className="md:w-1/2 p-8 md:p-12 text-gray-100"> {/* Adjusted for dark theme */}
-                  <h2 className="text-3xl font-bold roboto text-white mb-4">Ready to Explore the World?</h2> {/* Adjusted for dark theme */}
-                  <p className="text-gray-300 mb-6"> {/* Adjusted for dark theme */}
-                    Join thousands of satisfied travelers who trust **JetSetGO** for unforgettable journeys, seamless planning, and exceptional adventures—any destination, any dream.
+                <div className="md:w-1/2 p-8 md:p-12 text-gray-900"> {/* Adjusted for dark theme */}
+                  <h2 className="text-3xl font-bold roboto  mb-4">Ready to Explore the World?</h2> {/* Adjusted for dark theme */}
+                  <p className="text-gray-900 mb-6"> {/* Adjusted for dark theme */}
+                    Join thousands of satisfied travelers who trust **World Tour LLP** for unforgettable journeys, seamless planning, and exceptional adventures—any destination, any dream.
                   </p>
 
                   <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 group"> {/* Darker gradient for button */}
@@ -305,8 +301,8 @@ Trust us to plan your dream vacation! Let us handle the details, so you can focu
                 </div>
 
                 {/* Right Section */}
-                <div className="md:w-1/2 bg-gradient-to-br from-purple-800 to-indigo-900 p-8 md:p-12 text-white"> {/* New darker, richer gradient */}
-                  <h3 className="text-2xl font-bold roboto mb-4">Why Travel with JetSetGO?</h3>
+                <div className="md:w-1/2 bg-gradient-to-br from-indigo-600 to-indigo-900 p-8 md:p-12 text-white"> {/* New darker, richer gradient */}
+                  <h3 className="text-2xl font-bold roboto mb-4">World Tour LLP</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3">
                       <div className="bg-white/20 rounded-full p-1 mt-1">

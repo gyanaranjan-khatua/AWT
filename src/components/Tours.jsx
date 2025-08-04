@@ -111,7 +111,7 @@ const Card = ({ name, img, onClick }) => (
     <img src={img} alt={name} className="w-full h-44 object-cover group-hover:scale-110 transition" />
     <div className="p-4">
       <h3 className="text-lg font-bold text-white">{name}</h3>
-      <span className="block h-1 w-8 bg-blue-500 mt-2" />
+      <span className="block h-1 w-8 bg-orange-500 mt-2" />
     </div>
   </motion.div>
 );
@@ -128,16 +128,16 @@ const DestinationShowcase = () => {
 
 
   return (
-    <section className="bg-gradient-to-b from-gray-900 to-black py-20 px-4 sm:px-8">
+    <section className="bg-gradient-to-b from-sky-600 to-black py-20 px-4 sm:px-8">
       <div className="max-w-4xl mx-auto text-center mb-16">
         <h2 className="text-4xl font-bold text-white">
-          Explore <span className="text-blue-400">World & India</span> Tours
+          Explore <span className="text-gray-100">World & India</span> Tours
         </h2>
-        <p className="text-gray-400 mt-4">Handpicked destinations for your next adventure.</p>
+        <p className="text-gray-100 mt-4">Handpicked destinations for your next adventure.</p>
       </div>
 
       <div className="max-w-7xl mx-auto mb-16">
-        <h3 className="text-2xl font-semibold text-blue-400 mb-6">International Tours</h3>
+        <h3 className="text-2xl font-semibold text-blue-100 mb-6">International Tours</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {International.map((place) => (
             <Card key={place} name={place} img={intlImages[place]} onClick={handleCardClick} />
@@ -146,7 +146,7 @@ const DestinationShowcase = () => {
       </div>
 
       <div className="max-w-7xl mx-auto">
-        <h3 className="text-2xl font-semibold text-purple-400 mb-6">Indian Destinations</h3>
+        <h3 className="text-2xl font-semibold text-sky-400 mb-6">Indian Destinations</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
           {Indian.map((place) => (
             <Card key={place} name={place} img={indiaImages[place]} onClick={handleCardClick} />

@@ -97,7 +97,7 @@ With a rental car, you control the pace—take detours to secluded viewpoints, s
       <TopHero name="Blog" />
       <section className="max-w-6xl mx-auto px-6 py-10">
         <h2 className="text-3xl font-bold mb-8 text-center">
-          Latest Travel & Car Rental Tips
+          Latest Travel Blogs
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (

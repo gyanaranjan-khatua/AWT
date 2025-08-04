@@ -15,7 +15,7 @@ const Book = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "919556677620"; // Your WhatsApp number
+    const phoneNumber = "+919668504726"; // Your WhatsApp number
     const message = encodeURIComponent(
       `🌍 *Travel Trip Booking*\n\n👤 Name: ${formData.name}\n📞 Phone: ${formData.phone}\n📍 From: ${formData.yourLocation}\n🏁 To: ${formData.destination}\n📅 Trip Date: ${formData.date}\n👥 Group Type: ${formData.groupType}`
     );
@@ -27,9 +27,9 @@ const Book = () => {
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-gray-800 border-l-4 border-teal-500 w-full max-w-2xl p-8 rounded-2xl shadow-2xl"
+        className="bg-gray-800 border-l-4 border-cyan-500 w-full max-w-2xl p-8 rounded-2xl shadow-2xl"
       >
-        <h2 className="text-3xl font-extrabold text-center text-teal-400 mb-8">
+        <h2 className="text-3xl font-extrabold text-center text-cyan-400 mb-8">
           🧳 Book Your Travel Trip
         </h2>
 
@@ -88,7 +88,7 @@ const Book = () => {
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={handleWhatsAppClick}
-            className="w-full bg-green-600 shadow-lg hover:bg-green-700 text-white font-bold py-3 rounded-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75"
+            className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 shadow-lg hover:bg-green-700 text-white font-bold py-3 rounded-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75"
           >
             📲 Submit via WhatsApp
           </motion.button>

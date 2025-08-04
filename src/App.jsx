@@ -1,4 +1,4 @@
-import { Book, } from 'lucide-react'
+
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import About from './Pages/About'
@@ -14,6 +14,8 @@ import InternationalTour from './Pages/InternationalTour'
 import NationalTour from './Pages/NationalTour'
 import Topnavbar from './Navbar/Topnavbar.jsx'
 import Navbar from './Navbar/Navbar.jsx'
+import Footer from './Footer/Footer.jsx'
+import Book from './Pages/Book'
 
 function App() {
   return (
@@ -28,12 +30,13 @@ function App() {
       <Route path="/blog/:id" element={<BlogPost />} />
        <Route path="/gallery" element={<Gallery />} />
       <Route path="/faq" element={<Faq />} />
-      <Route path="/book" element={<Book />} />
+      <Route path="/book" element={<Book/>} />
       <Route path="/destination/:place" element={<DestinationDetail />} />
          <Route path="/booking" element={<BookingForm />} />
          <Route path="/internationalTour" element={<InternationalTour />} />
       <Route path="/nationalTour" element={<NationalTour />} />
   </Routes>
+      <Footer/>
   </>
   )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import bgImg from "../assets/id1.jpg";
+import bgImg from "../assets/in13.jpg";
 
 const BookingForm = () => {
   const location = useLocation();
@@ -21,7 +21,7 @@ const BookingForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "919556677620";
+    const phoneNumber = "919668504726";
     const message = encodeURIComponent(
       `🌍 *Travel Trip Booking*\n\n📍 Destination Country: ${country}\n🏞️ Place: ${place}\n\n👤 Name: ${formData.name}\n📞 Phone: ${formData.phone}\n📍 From: ${formData.yourLocation}\n📧 Email: ${formData.email}\n🎂 Age: ${formData.age}\n⚧️ Gender: ${formData.gender}\n👥 Group Type: ${formData.groupType}`
     );
