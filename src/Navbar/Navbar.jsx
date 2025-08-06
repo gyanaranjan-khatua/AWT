@@ -32,7 +32,7 @@ export default function Navbar() {
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
-            <button className="hover:text-blue-600">Tour</button>
+            <button className="hover:text-blue-600"> Destinations</button>
 
             <AnimatePresence>
               {isDropdownOpen && (
@@ -48,7 +48,7 @@ export default function Navbar() {
                       to="/internationalTour"
                       className="block px-4 py-2 hover:bg-blue-100 whitespace-nowrap"
                     >
-                      International Tour
+                      International 
                     </Link>
                   </li>
                   <li>
@@ -56,7 +56,7 @@ export default function Navbar() {
                       to="/nationalTour"
                       className="block px-4 py-2 hover:bg-blue-100 whitespace-nowrap"
                     >
-                      National Tour
+                      National 
                     </Link>
                   </li>
                 </motion.ul>
@@ -115,7 +115,7 @@ export default function Navbar() {
                   onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
                   className="flex items-center justify-between w-full text-left"
                 >
-                  Tour <ChevronDown className={`ml-2 transition-transform ${mobileDropdownOpen ? "rotate-180" : ""}`} />
+                  Destinations<ChevronDown className={`ml-2 transition-transform ${mobileDropdownOpen ? "rotate-180" : ""}`} />
                 </button>
                 <AnimatePresence>
                   {mobileDropdownOpen && (
@@ -132,7 +132,7 @@ export default function Navbar() {
                           className="block"
                           onClick={() => setMenuOpen(false)}
                         >
-                          International Tour
+                          International 
                         </Link>
                       </li>
                       <li>
@@ -141,7 +141,7 @@ export default function Navbar() {
                           className="block"
                           onClick={() => setMenuOpen(false)}
                         >
-                          National Tour
+                          National 
                         </Link>
                       </li>
                     </motion.ul>

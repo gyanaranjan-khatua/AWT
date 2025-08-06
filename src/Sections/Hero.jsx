@@ -164,7 +164,7 @@ export default function Hero() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-4 lg:px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-y-0 md:gap-x-10 min-h-[80vh] items-center">
           {/* Left Column */}
           <motion.div
@@ -187,7 +187,7 @@ export default function Hero() {
                 transition={{ duration: 0.6 }}
               >
                 Explore{" "}
-                <span className="bg-gradient-to-r from-amber-400 via-fuchsia-400 to-sky-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-white to-sky-400 bg-clip-text text-transparent">
                   {currentData.title}
                 </span>
               </motion.h1>
@@ -236,16 +236,17 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <Link to="/book">
-              <button className="bg-gradient-to-r from-indigo-700 to-fuchsia-600 hover:from-indigo-900 hover:to-fuchsia-800 text-white px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 font-semibold text-base sm:text-lg">
+              <button className="bg-gradient-to-r from-indigo-500 to-sky-500 hover:from-indigo-900 hover:to-fuchsia-800 text-white px-8 py-4 rounded-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 font-semibold text-base sm:text-lg">
                 <Calendar size={20} />
                 Book Now
               </button>
               </Link>
-              <a href="tel:+919668504726"></a>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-fuchsia-800 px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-transparent flex items-center justify-center gap-2 font-semibold text-base sm:text-lg backdrop-blur-sm">
+              <a href="tel:+919668504726">
+              <button className="border-2 border-white text-white hover:bg-white hover:text-blue-800 px-8 py-4 rounded-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-transparent flex items-center justify-center gap-2 font-semibold text-base sm:text-lg backdrop-blur-sm">
                 <Phone size={20} />
                 Call Now
               </button>
+              </a>
             </motion.div>
             {/* Slide Indicators */}
             <div className="flex items-center gap-3">

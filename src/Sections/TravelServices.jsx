@@ -2,9 +2,10 @@ import { useState } from "react"
 import airticket from "./../assets/airticket.jpg"
 import PassportAssistance from "./../assets/PassportAssistance.jpg"
 import visa from "./../assets/visa.jpg"
-import HotelBooking from "./../assets/HotelBooking.jpg"
-import ForexAssistance from "./../assets/ForexAssistance.jpg"
+import HotelBooking from "./../assets/Hotel2.jpg"
+import ForexAssistance from "./../assets/Forex.jpg"
 import cruise from "./../assets/cruise.jpg"
+import tour from "./../assets/tour.jpg"
 
 
 import { Link } from "react-router-dom"
@@ -52,7 +53,7 @@ const services = [
     title: "Holiday & Tour Packages",
     description: "Explore curated domestic and international holiday packages tailored to your needs.",
     icon: Palmtree,
-    image: airticket,
+    image: tour,
     gradient: "from-blue-500 to-cyan-500",
   },
   {
@@ -61,7 +62,7 @@ const services = [
     description: "Reserve top-rated hotels and accommodations with ease and exclusive deals.",
     icon: Building,
     image: HotelBooking,
-    gradient: "from-orange-500 to-red-500",
+    gradient: "from-blue-500 to-cyan-500",
   },
   {
     id: 3,
@@ -77,7 +78,7 @@ const services = [
     description: "Book luxurious cruises across oceans and rivers with unforgettable experiences.",
     icon: Compass,
     image: cruise,
-    gradient: "from-orange-500 to-red-500",
+    gradient: "from-blue-500 to-cyan-500",
   },
   {
     id: 5,
@@ -93,7 +94,7 @@ const services = [
     description: "Secure and fast foreign exchange services for all your international travels.",
     icon: DollarSign,
     image: ForexAssistance,
-    gradient: "from-orange-500 to-red-500",
+    gradient: "from-blue-500 to-cyan-500",
   },
 ]
 
@@ -226,7 +227,7 @@ export default function TravelServices() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-block p-2 bg-blue-100 rounded-full mb-4"
+            className="inline-block p-2 bg-gradient-to-r  from-orange-400 to-yellow-500 rounded-full mb-4"
           >
             <Compass className="w-8 h-8 text-blue-600" />
           </motion.div>
@@ -260,7 +261,7 @@ export default function TravelServices() {
                 }}
                 className="group"
               >
-                <Card className="h-full bg-white backdrop-blur-sm border-0 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                <Card className="h-full bg-white backdrop-blur-sm border-t-3 border-white shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
                   <div className="relative">
                     {/* Service Image */}
                     <div className="relative h-48 overflow-hidden">
@@ -309,7 +310,7 @@ export default function TravelServices() {
                         transition={{ delay: service.id * 0.1 + 0.5 }}
                       >
                         <Button
-                          className={`w-full bg-gradient-to-r ${service.gradient} hover:shadow-lg hover:scale-105 transition-all duration-300 text-white font-semibold py-3 rounded-xl`}
+                          className={`w-full bg-gradient-to-r ${service.gradient} hover:shadow-lg hover:scale-105 shadow-md transition-all duration-300 text-white font-semibold py-3 rounded-sm`}
                           onClick={() => handleBookNowClick(service.title)}
                         >
                           Book Now
@@ -330,13 +331,13 @@ export default function TravelServices() {
           transition={{ duration: 0.8, delay: 1 }}
           className="text-center mt-20"
         >
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 shadow-xl border border-white/20">
+          <div className="bg-gradient-to-r from-blue-900 to-indigo-600  rounded-xl p-8 shadow-xl border border-cyan-500">
             <h3 className="text-3xl font-bold text-gray-100 mb-4">Ready to Start Your Journey?</h3>
             <p className="text-gray-100 mb-6 max-w-2xl mx-auto">
-              Contact our travel experts today and let us create an unforgettable experience tailored just for you.
+              Connect with our team today and begin your customized travel adventure with Aquilo World Tour LLP.
             </p>
             <Link to="/book"  >
-            <Button className="bg-gradient-to-r from-orange-600 to-red-500 hover:from-red-500 hover:to-purple-700 text-white px-8 py-3 rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300">
+            <Button className="bg-gradient-to-r from-orange-600 to-yellow-500 hover:from-red-500 hover:to-purple-700 text-white px-8 py-3 rounded-sm font-semibold text-lg hover:scale-105 transition-all duration-300">
               Get Started Today
             </Button>
             </Link>

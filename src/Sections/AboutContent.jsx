@@ -51,29 +51,29 @@ const AboutContent = () => {
     { number: "Top-Rated", label: "Customer Satisfaction", icon: Shield },
   ];
 
+const values = [
+  {
+    icon: Sparkles,
+    title: "Tailored Holiday Packages",
+    description: "Designing every trip to reflect your interests, style, and pace of travel.",
+  },
+  {
+    icon: Target,
+    title: "End-to-End Travel Solutions",
+    description: "From ticketing to hotel bookings and visa support — we manage it all with precision.",
+  },
+  {
+    icon: Heart,
+    title: "Care Beyond Expectations",
+    description: "We prioritize your comfort and satisfaction with responsive support and warm hospitality.",
+  },
+  {
+    icon: Zap,
+    title: "Smart & Swift Services",
+    description: "Harnessing technology to deliver fast, accurate, and reliable travel assistance.",
+  },
+];
 
-  const values = [
-    {
-      icon: Sparkles,
-      title: "Personalized Experiences",
-      description: "Crafting unique itineraries that cater to your individual travel dreams.",
-    },
-    {
-      icon: Target,
-      title: "Seamless Planning",
-      description: "From flights to accommodations, we handle every detail for a stress-free journey.",
-    },
-    {
-      icon: Heart,
-      title: "Customer-First Approach",
-      description: "Your satisfaction is our priority, ensuring comfort and joy at every step.",
-    },
-    {
-      icon: Zap,
-      title: "Innovation in Travel",
-      description: "Utilizing cutting-edge tools to provide efficient and memorable travel solutions.",
-    },
-  ];
 
 
   return (
@@ -89,12 +89,54 @@ const AboutContent = () => {
               animate="visible"
             >
               {/* Text Section */}
-              <motion.div className="md:w-1/2 mb-12 md:mb-0" variants={itemVariants}>
+             
+
+              {/* Image Section with floating elements */}
+              <motion.div className="md:w-1/2 relative" variants={fadeInUpVariants} initial="hidden" animate="visible">
+                <div className="relative z-10">
+                  <motion.div
+                    className="absolute -top-4 -left-4 bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg shadow-lg" /* Adjusted for dark theme */
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.8, duration: 0.6 }}
+                  >
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 bg-orange-300 rounded-full"></div>
+                      <span className="text-sm font-medium text-gray-200">Established 2010</span> {/* Adjusted for dark theme */}
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    className="absolute -bottom-4 -right-4 bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg shadow-lg" /* Adjusted for dark theme */
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 1, duration: 0.6 }}
+                  >
+                    <div className="flex items-center gap-2">
+                      <Shield className="w-4 h-4 text-red-300" />
+                      <span className="text-sm font-medium text-gray-200">Your Travel Partner</span> {/* Adjusted for dark theme */}
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    className="rounded-2xl overflow-hidden shadow-2xl border-8 border-gray-700" /* Darker border */
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <img
+                      src={aboutimg}
+                      alt="Happy people shaking hands, symbolizing trust and partnership"
+                      className="w-full h-auto object-cover"
+                    />
+                  </motion.div>
+                </div>
+              </motion.div>
+               <motion.div className="md:w-1/2 mb-12 md:mb-0" variants={itemVariants}>
                 <motion.div
-                  className="inline-flex items-center gap-2 shadow-lg backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-white bg-orange-400 mb-6" /* Adjusted for dark theme */
+                  className="inline-flex items-center gap-2 shadow-lg backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r from-orange-400 to-yellow-500 mb-6" /* Adjusted for dark theme */
                   variants={scaleVariants}
                 >
-                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                  <span className="w-2 h-2 bg-black rounded-full"></span>
                   Our Story
                 </motion.div>
 
@@ -103,9 +145,10 @@ const AboutContent = () => {
   variants={itemVariants}
 >
   About{" "}
-  <span className="text-red-500">
-    Aquilo <span className="text-red-500">World Tour LLP</span>
-  </span>
+ <span className="bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent">
+  Aquilo <span className="bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent">World Tour LLP</span>
+</span>
+
 </motion.h1>
 
 <motion.p className="text-gray-900 text-lg md:text-xl mb-3 leading-relaxed" variants={itemVariants}>
@@ -137,47 +180,6 @@ const AboutContent = () => {
                   </Link>
                 </motion.div>
               </motion.div>
-
-              {/* Image Section with floating elements */}
-              <motion.div className="md:w-1/2 relative" variants={fadeInUpVariants} initial="hidden" animate="visible">
-                <div className="relative z-10">
-                  <motion.div
-                    className="absolute -top-4 -left-4 bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg shadow-lg" /* Adjusted for dark theme */
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.8, duration: 0.6 }}
-                  >
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                      <span className="text-sm font-medium text-gray-200">Established 2010</span> {/* Adjusted for dark theme */}
-                    </div>
-                  </motion.div>
-
-                  <motion.div
-                    className="absolute -bottom-4 -right-4 bg-gray-800/80 backdrop-blur-sm p-3 rounded-lg shadow-lg" /* Adjusted for dark theme */
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 1, duration: 0.6 }}
-                  >
-                    <div className="flex items-center gap-2">
-                      <Shield className="w-4 h-4 text-red-600" />
-                      <span className="text-sm font-medium text-gray-200">Your Travel Partner</span> {/* Adjusted for dark theme */}
-                    </div>
-                  </motion.div>
-
-                  <motion.div
-                    className="rounded-2xl overflow-hidden shadow-2xl border-8 border-gray-700" /* Darker border */
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <img
-                      src={aboutimg}
-                      alt="Happy people shaking hands, symbolizing trust and partnership"
-                      className="w-full h-auto object-cover"
-                    />
-                  </motion.div>
-                </div>
-              </motion.div>
             </motion.div>
           </div>
         </section>
@@ -196,7 +198,7 @@ const AboutContent = () => {
                 return (
                   <motion.div
                     key={index}
-                    className="bg-gray-800 backdrop-blur-sm rounded-sm p-6 shadow-lg border-t-2 border-blue-600 hover:shadow-xl transition-all duration-300" /* Darker card background, brighter border */
+                    className="bg-gray-800 backdrop-blur-sm rounded-sm p-6 shadow-lg border-t-2 border-blue-500 hover:shadow-xl transition-all duration-300" /* Darker card background, brighter border */
                     variants={fadeInUpVariants}
                     whileHover={{ y: -5 }}
                   >
@@ -241,8 +243,7 @@ const AboutContent = () => {
                 Our Core Values
               </h2>
               <p className="text-gray-300 max-w-2xl text-lg mx-auto"> {/* Adjusted for dark theme */}
-                These values drive everything we do at JetSetGO—from how we curate
-                your journey to how we ensure every moment is extraordinary.
+               Everything we do at Aquilo World Tour is rooted in these values—ensuring your journey is thoughtfully curated and every moment feels extraordinary
               </p>
             </motion.div>
 
@@ -291,7 +292,7 @@ const AboutContent = () => {
                 <div className="md:w-1/2 p-8 md:p-12 text-gray-900"> {/* Adjusted for dark theme */}
                   <h2 className="text-3xl font-bold roboto  mb-4">Ready to Explore the World?</h2> {/* Adjusted for dark theme */}
                   <p className="text-gray-900 mb-6"> {/* Adjusted for dark theme */}
-                    Join thousands of satisfied travelers who trust **World Tour LLP** for unforgettable journeys, seamless planning, and exceptional adventures—any destination, any dream.
+                    Join thousands of satisfied travelers who trust **Aquilo World Tour LLP** for unforgettable journeys, seamless planning, and exceptional adventures—any destination, any dream.
                   </p>
 
                   <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 group"> {/* Darker gradient for button */}

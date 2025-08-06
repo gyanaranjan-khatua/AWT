@@ -1,160 +1,124 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { ChevronDown, HelpCircle, Sparkles } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Link } from "react-router-dom"
+import { useState } from "react";
+import { ChevronDown, HelpCircle, Sparkles } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
-
+// Data remains the same for easy integration
 const faqData = [
   {
-    question: "Do you offer Air Ticket booking for domestic and international travel?",
+    question: "What does your Holiday & Tour Packages service include?",
     answer:
-      "Yes, we provide hassle-free booking for both domestic and international flights with best price deals and instant ticketing.",
-    icon: "✈️",
+      "Our holiday packages include curated itineraries, accommodation, sightseeing, guided tours, and travel support for a seamless vacation experience.",
+    icon: "🌍",
   },
   {
-    question: "How can I get assistance with applying for a Passport?",
+    question: "Can I book hotels in advance through your platform?",
     answer:
-      "Our experts help you complete your passport application, book appointments, and ensure all documents are submitted correctly.",
-    icon: "🛂",
-  },
-  {
-    question: "Do you help with Visa processing?",
-    answer:
-      "Absolutely. We guide you through every step of visa documentation and submission for tourist, business, and student visas.",
-    icon: "📄",
-  },
-  {
-    question: "Can you help me book hotels during my trip?",
-    answer:
-      "Yes, we offer hotel booking services for all budgets and preferences — from budget stays to luxury resorts.",
+      "Yes, we offer hotel reservations across all budget ranges, including luxury stays, boutique hotels, and budget-friendly lodgings with special deals.",
     icon: "🏨",
   },
   {
-    question: "What is Forex Assistance and how do you help?",
+    question: "How do you assist with Passport and VISA services?",
     answer:
-      "We help travelers get the best foreign currency exchange rates legally and securely before international travel.",
+      "We offer complete support with passport applications, renewals, and visa processing for tourist, business, student, and work travel purposes.",
+    icon: "🛂",
+  },
+  {
+    question: "Do you provide Cruise Booking services?",
+    answer:
+      "Yes, we book cruise vacations with top cruise lines — domestic and international — including cabin selection, meals, and excursion planning.",
+    icon: "🛳️",
+  },
+  {
+    question: "What kind of help do you provide with Forex Assistance?",
+    answer:
+      "We help travelers obtain foreign currency legally and at competitive rates, along with guidance on currency regulations and card usage abroad.",
     icon: "💱",
   },
   {
-    question: "Do you provide Travel Insurance?",
+    question: "Can I book air tickets with you for domestic and international travel?",
     answer:
-      "Yes, we offer travel insurance policies that cover emergencies, cancellations, medical expenses, and more.",
-    icon: "🛡️",
+      "Absolutely! We offer quick and affordable air ticketing for both domestic and international flights with instant confirmations.",
+    icon: "✈️",
   },
-  {
-    question: "Can I rent a car through your service?",
-    answer:
-      "Yes, we offer car rental services across cities, including self-drive and chauffeur-driven vehicles of all categories.",
-    icon: "🚗",
-  },
-  {
-    question: "What is Destination Wedding support?",
-    answer:
-      "We manage end-to-end travel, guest accommodations, and logistics for unforgettable destination weddings in India or abroad.",
-    icon: "💍",
-  },
-  {
-    question: "Do you organize MICE Tourism (Meetings, Incentives, Conferences, and Exhibitions)?",
-    answer:
-      "Yes, we provide full support for corporate events including venue booking, travel coordination, and event execution.",
-    icon: "🎤",
-  },
-  {
-    question: "Can I book group tours through your platform?",
-    answer:
-      "Yes, we organize customized group tours for families, corporate teams, and educational institutions with complete planning.",
-    icon: "👨‍👩‍👧‍👦",
-  },
-  {
-    question: "Do you help with honeymoon packages?",
-    answer:
-      "Absolutely! We offer tailored honeymoon packages with romantic destinations, activities, and accommodation at great prices.",
-    icon: "🌹",
-  },
-  {
-    question: "Is airport pickup and drop available?",
-    answer:
-      "Yes, we provide reliable airport transfers with timely pickups and drops using comfortable and clean vehicles.",
-    icon: "🚕",
-  },
-]
+];
 
 export default function FaqSection() {
-  const [openIndex, setOpenIndex] = useState(null)
+  const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index)
-  }
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   return (
-    <>
+    <section className="relative min-h-screen bg-black overflow-hidden py-24 px-6 md:px-12 text-white">
+      {/* Dynamic Background Elements */}
+      <div className="absolute inset-0 z-0">
+        {/* Subtle, moving light blobs */}
+        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-blob"></div>
+        <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-indigo-500 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-blob animation-delay-4000"></div>
 
-    <section className="relative min-h-screen bg-gradient-to-br from-gray-900 via-zinc-900 to-black py-14 px-6 md:px-12 overflow-hidden text-white">
-      {/* Enhanced Background Elements */}
-      <div className="absolute inset-0">
-        {/* <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-blue-900 to-purple-900 rounded-full mix-blend-screen filter blur-xl opacity-30 animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-pink-900 to-yellow-900 rounded-full mix-blend-screen filter blur-xl opacity-25 animate-pulse animation-delay-2000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-to-r from-green-900 to-blue-900 rounded-full mix-blend-screen filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div> */}
-
-        {/* Floating particles */}
-        {[...Array(20)].map((_, i) => (
+        {/* Ethereal, floating particles */}
+        {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-gray-500 rounded-full opacity-20"
+            className="absolute w-2 h-2 bg-white rounded-full opacity-5"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+              filter: `blur(${Math.random() * 1.5}px)`,
             }}
             animate={{
-              y: [0, -20, 0],
-              opacity: [0.2, 0.5, 0.2],
+              y: [0, Math.random() * 50 - 25, 0],
+              x: [0, Math.random() * 50 - 25, 0],
+              opacity: [0.05, 0.15, 0.05],
             }}
             transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Number.POSITIVE_INFINITY,
-              delay: Math.random() * 2,
+              duration: 5 + Math.random() * 5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: Math.random() * 3,
             }}
           />
         ))}
       </div>
 
-      <div className="max-w-5xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-20 relative"
         >
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-orange-400 rounded-full mb-6 shadow-lg"
+            className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-indigo-700 to-purple-600 rounded-full p-4 mb-6 shadow-2xl"
           >
-            <HelpCircle className="w-10 h-10 text-white" />
+            <HelpCircle className="w-12 h-12 text-white" />
           </motion.div>
 
-          <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-gray-50 via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6 leading-tight">
-            Frequently Asked Questions
-            
+          <h2 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-gray-50 via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6 leading-tight">
+            Common Questions, Clear Answers
           </h2>
 
           <motion.div
             initial={{ width: 0 }}
-            whileInView={{ width: "100px" }}
+            whileInView={{ width: "120px" }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="h-1 bg-gradient-to-r from-red-500 to-orange-400 mx-auto mb-6 rounded-full"
+            className="h-1.5 bg-gradient-to-r from-indigo-600 to-purple-500 mx-auto mb-6 rounded-full"
           />
 
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Find answers to common questions about our mission, services, and how you can get involved in making a
-            difference.
+          <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-light">
+            We know you have questions. We have the answers. Explore our comprehensive services and find out how we make your journey unforgettable.
           </p>
         </motion.div>
 
@@ -170,22 +134,21 @@ export default function FaqSection() {
               className="group"
             >
               <motion.div
-                className={`relative bg-gray-800/80 backdrop-blur-sm rounded-xl p-5 border border-gray-700/50 cursor-pointer transition-all duration-300 ${
-                  openIndex === index ? "shadow-2xl shadow-blue-900/20 border-blue-700/50" : "shadow-lg hover:shadow-xl"
+                className={`relative bg-white/5 backdrop-blur-xl rounded-3xl p-6 border border-white/10 cursor-pointer transition-all duration-300 ${
+                  openIndex === index ? "shadow-[0_0_40px_rgba(99,102,241,0.5)] border-indigo-500/50" : "shadow-lg hover:shadow-2xl hover:border-white/20"
                 }`}
                 whileHover={{
-                  scale: 1.02,
-                  boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.35)",
+                  scale: 1.01,
                 }}
                 whileTap={{ scale: 0.98 }}
               >
-                {/* Gradient border effect */}
+                {/* Dynamic Gradient border effect */}
                 <div
-                  className={`absolute inset-0 rounded-xl bg-gradient-to-r  from-red-600  to-orange-400 p-[2px] transition-opacity duration-300 ${
-                    openIndex === index ? "opacity-100" : "opacity-0 group-hover:opacity-90"
+                  className={`absolute inset-0 rounded-3xl bg-gradient-to-br from-indigo-600 to-purple-500 p-[2px] transition-opacity duration-500 ${
+                    openIndex === index ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                   }`}
                 >
-                  <div className="bg-gray-900 rounded-3xl h-full w-full" />
+                  <div className="bg-black/90 rounded-[1.4rem] h-full w-full" />
                 </div>
 
                 <div className="relative z-10">
@@ -193,15 +156,15 @@ export default function FaqSection() {
                     onClick={() => toggleFAQ(index)}
                     className="flex items-center justify-between w-full text-left focus:outline-none group"
                   >
-                    <div className="flex items-center space-x-4 flex-1">
+                    <div className="flex items-center space-x-6 flex-1">
                       <motion.div
-                        className="text-3xl"
-                        whileHover={{ scale: 1.2, rotate: 10 }}
+                        className="text-4xl leading-none"
+                        whileHover={{ scale: 1.1, rotate: 5 }}
                         transition={{ type: "spring", stiffness: 300 }}
                       >
                         {faq.icon}
                       </motion.div>
-                      <h3 className="text-lg md:text-xl font-bold text-gray-200 group-hover:text-blue-400 transition-colors duration-300">
+                      <h3 className="text-xl md:text-2xl font-bold text-gray-100 group-hover:text-blue-300 transition-colors duration-300">
                         {faq.question}
                       </h3>
                     </div>
@@ -211,20 +174,20 @@ export default function FaqSection() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       className={`ml-4 p-2 rounded-full transition-all duration-300 ${
                         openIndex === index
-                          ? "bg-gradient-to-r from-red-700 to-orange-800 text-white shadow-lg"
-                          : "bg-gray-700 text-gray-400 group-hover:bg-blue-900 group-hover:text-blue-200"
+                          ? "bg-gradient-to-br from-indigo-600 to-purple-500 text-white shadow-lg"
+                          : "bg-gray-800 text-gray-400 group-hover:bg-indigo-900 group-hover:text-white"
                       }`}
                     >
-                      <ChevronDown className="w-5 h-5" />
+                      <ChevronDown className="w-6 h-6" />
                     </motion.div>
                   </button>
 
                   <AnimatePresence>
                     {openIndex === index && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0, y: -10 }}
-                        animate={{ opacity: 1, height: "auto", y: 0 }}
-                        exit={{ opacity: 0, height: 0, y: -10 }}
+                        initial={{ opacity: 0, height: 0, marginTop: 0 }}
+                        animate={{ opacity: 1, height: "auto", marginTop: "1.5rem" }}
+                        exit={{ opacity: 0, height: 0, marginTop: 0 }}
                         transition={{
                           duration: 0.4,
                           ease: [0.4, 0.0, 0.2, 1],
@@ -232,17 +195,19 @@ export default function FaqSection() {
                         }}
                         className="overflow-hidden"
                       >
-                        <div className="mt-6 pt-6 border-t border-gradient-to-r from-blue-900 to-purple-900">
+                        <div className="pt-6 border-t border-white/10">
                           <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.2 }}
-                            className="flex items-start space-x-3"
+                            className="flex items-start space-x-4"
                           >
                             <div className="flex-shrink-0 mt-1">
-                              <Sparkles className="w-5 h-5 text-blue-500" />
+                              <Sparkles className="w-6 h-6 text-indigo-400" />
                             </div>
-                            <p className="text-gray-300 text-lg leading-relaxed">{faq.answer}</p>
+                            <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-light">
+                              {faq.answer}
+                            </p>
                           </motion.div>
                         </div>
                       </motion.div>
@@ -260,26 +225,28 @@ export default function FaqSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-center mt-16"
+          className="text-center mt-20"
         >
-          <div className="bg-gradient-to-r from-blue-700 to-sky-600 rounded-3xl p-8 text-white shadow-2xl">
-            <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
-            <p className="text-blue-100 mb-6 text-lg">
-              {"We're here to help! Reach out to us for any additional information."}
+          <div className="relative bg-white/5 backdrop-blur-xl rounded-3xl p-10 text-white shadow-2xl border border-white/10">
+            <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+              Still have questions?
+            </h3>
+            <p className="text-gray-300 mb-8 text-lg">
+              {"Don't hesitate to reach out! Our team is ready to provide personalized support."}
             </p>
-            <Link to="/contact">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-blue-800 px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Contact Us
-            </motion.button>
+            <Link to="/contact" className="inline-block">
+              <motion.button
+                whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(99,102,241,0.5)" }}
+                whileTap={{ scale: 0.95 }}
+                className="relative bg-gradient-to-br from-indigo-600 to-purple-500 text-white px-10 py-4 rounded-full font-bold shadow-lg transition-all duration-300 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 hover:opacity-10" />
+                Contact Us
+              </motion.button>
             </Link>
           </div>
         </motion.div>
       </div>
     </section>
-    </>
-  )
+  );
 }

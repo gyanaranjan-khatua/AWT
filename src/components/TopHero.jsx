@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import bgImage from "../assets/topbg.jpg"; // Replace with your actual image
+import bgImage from "../assets/topbg2.jpg"; // Replace with your actual image
 
 const TopHero = (props) => {
   return (

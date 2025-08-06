@@ -3,56 +3,57 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 // ✅ Import local images
-import GuwahatiShillong from "../assets/in1.jpg";
-import ArunachalPradeshKonarkTemple from "../assets/in2.jpg";
-import SikkimDarjeeling from "../assets/in3.jpg";
+import blog1 from "../assets/id1.jpg";
+import blog2 from "../assets/in7.webp";
+import blog3 from "../assets/in11.jpg";
 import TopHero from "../components/TopHero";
 
 function Blog() {
   const blogPosts = [
-    {
-      id: 1,
-      title: "Guwahati to Shillong: Scenic Drive & Travel Guide",
-      description:
-        "Plan the perfect road trip from Guwahati to Shillong. Discover hidden gems, food stops, and breathtaking viewpoints along this mesmerizing hill drive.",
-      imageUrl: GuwahatiShillong,
-      date: "July 15, 2024",
-      author: "Highway Explorer",
-      content: `The journey from Guwahati to Shillong is more than just a road trip—it's a scenic adventure through lush hills, winding roads, waterfalls, and tribal villages.
+  {
+    id: 1,
+    title: "Australia Road Trip: Beaches, Outback & Cities",
+    description:
+      "Uncover the magic of Australia with a self-drive trip through Sydney, the Great Ocean Road, and the Red Centre. Discover vibrant cities, coastal beauty, and rugged wilderness.",
+    imageUrl: blog1,
+    date: "August 01, 2024",
+    author: "Global Wanderer",
+    content: `Australia is a vast canvas of natural wonders and urban delights. Start your journey in Sydney, exploring iconic spots like the Opera House and Bondi Beach. Then rent a car and head out on the Great Ocean Road for dramatic coastal views and charming seaside towns.
 
-This 100 km stretch takes around 3 hours, but with so many stops like Umiam Lake, Elephant Falls, and local Khasi food stalls, it's best enjoyed slow. Rent a car and cruise through the foggy highlands at your own pace.
+Drive inland to experience the rugged Outback and witness Uluru at sunrise—a truly spiritual moment. Don’t miss Melbourne's coffee culture or the wildlife on Kangaroo Island.
 
-With every turn, the air gets cooler and fresher. Stop at Nongpoh for snacks, capture pictures at the viewpoint near Barapani, and enjoy a picnic by the lake. Shillong welcomes you with colonial charm, music cafes, and a lively market culture. A self-drive car makes it all easy and flexible.`,
-    },
-    {
-      id: 2,
-      title: "Konark Sun Temple & Arunachal: Culture Meets Nature",
-      description:
-        "Explore India’s northeast starting from Arunachal's scenic drives to Odisha’s majestic Konark Sun Temple. A road trip filled with spirituality and beauty.",
-      imageUrl: ArunachalPradeshKonarkTemple,
-      date: "July 10, 2024",
-      author: "Culture Explorer",
-      content: `Arunachal Pradesh, with its misty mountains and tribal culture, offers a soul-stirring road trip experience. Drive through Tawang, Ziro, and Bomdila to soak in untouched Himalayan beauty.
+Whether you're chasing waves, kangaroos, or starlit desert skies, Australia offers the freedom to explore at your own pace. A road trip here is both diverse and unforgettable.`,
+  },
+  {
+    id: 2,
+    title: "Simanchal Temple Trail: Visakhapatnam's Sacred Secrets",
+    description:
+      "Discover the spiritual side of Visakhapatnam with a temple trail covering the lesser-known Simanchal hills. A divine drive through coastal Andhra’s cultural heritage.",
+    imageUrl: blog2,
+    date: "July 28, 2024",
+    author: "Temple Voyager",
+    content: `Visakhapatnam, known for its beaches and port, also hides a spiritual treasure in the Simanchal Hills. The Simhachalam Temple, dedicated to Lord Varaha Narasimha, is an architectural marvel with centuries of devotion etched in stone.
 
-Contrast this with Odisha’s architectural marvel—the Konark Sun Temple. This UNESCO World Heritage site tells ancient stories through stone carvings. The Marine Drive from Puri to Konark is a treat with sea breeze and smooth tarmac.
+A scenic drive through green valleys and hilly curves takes you to this hilltop temple. En route, explore ancient shrines and stop for panoramic views of the city and sea.
 
-Blend both journeys for an India-wide cultural experience—from Buddhist monasteries to Hindu temples. Renting a car allows you to plan a flexible and scenic route between nature and heritage.`,
-    },
-    {
-      id: 3,
-      title: "Sikkim to Darjeeling: Himalayan Road Trip Adventure",
-      description:
-        "Explore the best of North Bengal & Sikkim in a self-drive trip from Gangtok to Darjeeling. Enjoy tea gardens, snow-capped peaks & mountain monasteries.",
-      imageUrl: SikkimDarjeeling,
-      date: "July 05, 2024",
-      author: "Mountain Nomad",
-      content: `A self-drive journey through Sikkim and Darjeeling is like driving through postcards. Begin in Gangtok and head toward Tsomgo Lake, then take the scenic road to Darjeeling via Kalimpong.
+The atmosphere is serene—perfect for reflection. A self-drive route allows you to explore at your own rhythm, stopping for coastal snacks or temple rituals. Visakhapatnam’s sacred side is a hidden gem waiting to be explored.`,
+  },
+  {
+    id: 3,
+    title: "Gateway of India: Drive Through Mumbai’s Heritage Heart",
+    description:
+      "Take a self-drive exploration through Mumbai’s colonial past, starting with the Gateway of India. Discover historic landmarks, bustling markets, and coastal charm.",
+    imageUrl: blog3,
+    date: "July 20, 2024",
+    author: "City Historian",
+    content: `Mumbai’s Gateway of India stands proudly overlooking the Arabian Sea—a symbol of colonial history and modern resilience. Begin your journey here and let the city unfold around you.
 
-Stop at monasteries, taste hot momos at roadside stalls, and sip tea at plantations. Whether it's the sunrise at Tiger Hill or a walk on MG Marg, these towns blend colonial charm with Tibetan influence.
+Drive past the Taj Mahal Palace Hotel, through Colaba Causeway, and toward Marine Drive. Explore British-era architecture, visit art galleries, and relax at Chowpatty Beach. Each stop reveals a different shade of Mumbai’s personality.
 
-With a rental car, you control the pace—take detours to secluded viewpoints, spend extra time in bustling bazaars, or discover hidden waterfalls. The freedom of driving in the hills makes this trip unforgettable.`,
-    },
-  ];
+With a rental car, you’re free to explore old bazaars, hidden cafes, or sea-facing promenades at your leisure. Mumbai is more than a city—it’s an experience best savored on your own terms.`,
+  },
+];
+
 
   // Individual blog card component
   const BlogPostCard = ({ post }) => {

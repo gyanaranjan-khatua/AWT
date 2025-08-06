@@ -183,7 +183,7 @@ const ContactSection = () => {
                   <div>
                     <h4 className="font-medium text-gray-200">Location</h4>
                     <p className="text-gray-300">Plot No-Scr 25, Back Side of Boyonika Bhawan,Unit-III </p>
-                    <br />
+               
                     <p className="text-gray-300">Kharvel Nagar Bhubaneswar, Odisha 751001</p>
                   </div>
                 </div>

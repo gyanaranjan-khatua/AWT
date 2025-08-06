@@ -10,7 +10,7 @@ import img5 from '../assets/awt5.jpeg';
 
 
 const images = [
-  img1, img2, img3, img4, img5,
+  img1, img2, img3, img4, img5,img1
 ];
 
 const Gallery = () => {

@@ -106,12 +106,14 @@ const Card = ({ name, img, onClick }) => (
     whileHover={{ scale: 1.06, y: -8 }}
     transition={{ type: "spring", stiffness: 230, damping: 17 }}
     onClick={() => onClick(name)}
-    className="group relative rounded-2xl shadow-xl bg-gray-800/90 overflow-hidden cursor-pointer"
+    className="group relative rounded-sm border-b-2 border-white  shadow-xl bg-white overflow-hidden cursor-pointer"
   >
     <img src={img} alt={name} className="w-full h-44 object-cover group-hover:scale-110 transition" />
     <div className="p-4">
-      <h3 className="text-lg font-bold text-white">{name}</h3>
-      <span className="block h-1 w-8 bg-orange-500 mt-2" />
+      <h3 className="text-lg text-center font-bold text-gray-900">{name}</h3>
+      {/* <span className="block h-1 w-full bg-gradient-to-r from-white via-orange-300 rounded-full to-white mt-2" /> */}
+      <p className=" p-1 shadow-md rounded-full text-center text-white bg-gradient-to-r mt-1 from-blue-500 to-cyan-600 ">Explore Now</p>
+      
     </div>
   </motion.div>
 );
@@ -128,26 +130,56 @@ const DestinationShowcase = () => {
 
 
   return (
-    <section className="bg-gradient-to-b from-sky-600 to-black py-20 px-4 sm:px-8">
+    <section className="bg-gradient-to-b from-gray-900 to-black py-20 px-4 sm:px-8">
       <div className="max-w-4xl mx-auto text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">
-          Explore <span className="text-gray-100">World & India</span> Tours
-        </h2>
-        <p className="text-gray-100 mt-4">Handpicked destinations for your next adventure.</p>
+           <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-100 to-cyan-500 bg-clip-text text-transparent mb-6">
+           Elite Travel Services Just for You
+          </h2>
+
+          <p className="text-xl text-gray-100 max-w-3xl mx-auto leading-relaxed">
+            Discover our comprehensive range of travel services crafted to make every part of your journey smooth, exciting, and unforgettable. From Holiday Packages to Hotel Reservations, Passport & VISA, Cruise Bookings, Forex Assistance, and Air Ticketing — we’ve got it all covered for you.
+          </p>
       </div>
 
-      <div className="max-w-7xl mx-auto mb-16">
-        <h3 className="text-2xl font-semibold text-blue-100 mb-6">International Tours</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          {International.map((place) => (
-            <Card key={place} name={place} img={intlImages[place]} onClick={handleCardClick} />
-          ))}
+<div className="max-w-7xl mx-auto mb-16">
+  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center bg-gradient-to-r from-gray-900 via-blue-500 to-gray-900 p-3 font-semibold text-white mb-6">International Destinations</h3>
+  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    {International.map((place) => (
+      <motion.div
+        key={place}
+        className="p-[2px] rounded-sm bg-gradient-to-r from-cyan-500 via-blue-500 to-yellow-500"
+        style={{
+          backgroundSize: "300% 300%",
+        }}
+        animate={{
+          backgroundPosition: [
+            "0% 50%",
+            "100% 50%",
+            "0% 50%", // loop back
+          ],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      >
+        <div className="rounded-xl bg-black w-full h-full">
+          <Card
+            name={place}
+            img={intlImages[place]}
+            onClick={handleCardClick}
+          />
         </div>
-      </div>
+      </motion.div>
+    ))}
+  </div>
+</div>
+
 
       <div className="max-w-7xl mx-auto">
-        <h3 className="text-2xl font-semibold text-sky-400 mb-6">Indian Destinations</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white text-center bg-gradient-to-r from-black via-cyan-600 to-black p-3 mb-6">National Destinations</h3>
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {Indian.map((place) => (
             <Card key={place} name={place} img={indiaImages[place]} onClick={handleCardClick} />
           ))}
